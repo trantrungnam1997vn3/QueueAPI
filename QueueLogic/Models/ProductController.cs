@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using vse.core;
 
 namespace QueueLogic.Models
 {
@@ -16,10 +17,9 @@ namespace QueueLogic.Models
         // Xoa 10 sp
         
         [HttpGet]
-        public IHttpActionResult WriteLog()
+        public IHttpActionResult WriteLog(string message)
         {
-            
-            QueueProccess.Sync();
+            LogData.Info(message);
             return Ok<String>("hello");
         }
     }

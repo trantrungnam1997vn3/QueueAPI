@@ -7,5 +7,6 @@ namespace QueueLogic.Helpers
 {
     public class ActionHelper
     {
+         
     }
 }
